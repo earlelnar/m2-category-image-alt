@@ -26,3 +26,8 @@ By default Magento 2 has only these category attributes under Search Engine Opti
 
 ![category_image_alt](https://user-images.githubusercontent.com/14094984/66200814-6e548980-e6d4-11e9-96ba-cc739da6634c.png)
 
+<br/>
+
+## Example
+
+![sample_earl](https://user-images.githubusercontent.com/14094984/66201312-a27c7a00-e6d5-11e9-9163-cc582b67d5ff.png)
