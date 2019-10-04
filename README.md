@@ -31,3 +31,13 @@ By default Magento 2 has only these category attributes under Search Engine Opti
 ## Example
 
 ![sample_earl](https://user-images.githubusercontent.com/14094984/66201312-a27c7a00-e6d5-11e9-9163-cc582b67d5ff.png)
+
+<br/>
+
+## Magento Tested Version
+Magento 2.3.1
+
+<br/>
+
+## Changelog
+**Version 2.0.0 (2019-10-4)**
