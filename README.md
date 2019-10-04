@@ -35,7 +35,7 @@ By default Magento 2 has only these category attributes under Search Engine Opti
 <br/>
 
 ## Magento Tested Version
-Magento 2.3.1
+Magento 2.3.2
 
 <br/>
 
