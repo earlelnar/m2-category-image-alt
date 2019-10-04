@@ -1,5 +1,5 @@
 # Magento 2 Category Image Alt Tag
-Set Custom Category Image Alt to catalog category images. 
+Set Custom Category Image Alt to catalog category images for SEO purpose.
 <br/>
 By default Magento 2 has only these category attributes under Search Engine Optimization.
 
