@@ -1,52 +1,60 @@
 <?php
+/**
+ * EE Bored in the house.
+ *
+ * @category    EE
+ * @package     CategoryImageAltTags
+ * @author      Earl Elnar
+ * @email       acenplify@gmail.com
+ */
 
-namespace MageTim\CategoryImageAltTags\Setup;
+namespace EE\CategoryImageAltTags\Setup;
 
+use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Eav\Setup\EavSetup;
 use Magento\Eav\Setup\EavSetupFactory;
-
+use Zend_Validate_Exception;
 
 /**
- * @codeCoverageIgnore
+ * Install Custom Attribute for Category Class
  */
 class InstallData implements InstallDataInterface
 {
     /**
-     * EAV setup factory
-     *
-     * @var EavSetupFactory
+     * @var \Magento\Eav\Setup\EavSetupFactory
      */
     private $eavSetupFactory;
 
     /**
-     * Init
+     * Class Constructor
      *
-     * @param EavSetupFactory $eavSetupFactory
+     * @param \Magento\Eav\Setup\EavSetupFactory $eavSetupFactory
      */
-    public function __construct(EavSetupFactory $eavSetupFactory)
-    {
+    public function __construct(
+        EavSetupFactory $eavSetupFactory
+    ) {
         $this->eavSetupFactory = $eavSetupFactory;
     }
 
     /**
-     * {@inheritdoc}
-     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     * Add Image Alt category custom attribute
+     *
+     * @param \Magento\Framework\Setup\ModuleDataSetupInterface $setup
+     * @param \Magento\Framework\Setup\ModuleContextInterface $context
+     * @throws LocalizedException
+     * @throws Zend_Validate_Exception
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
         /** @var EavSetup $eavSetup */
         $eavSetup = $this->eavSetupFactory->create(['setup' => $setup]);
-
-        /**
-         * Add attributes to the eav/attribute
-         */
-
         $eavSetup->addAttribute(
             \Magento\Catalog\Model\Category::ENTITY,
-            'magetim_category_image_alt',
+            'ee_category_image_alt',
             [
                 'type' => 'text',
                 'label' => 'Category Image Alt',

@@ -1,11 +1,12 @@
 <?php
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * EE Bored in the house.
+ *
+ * @category    EE
+ * @package     CategoryImageAltTags
+ * @author      Earl Elnar
+ * @email       acenplify@gmail.com
  */
-
-// @codingStandardsIgnoreFile
-
 ?>
 <?php
 /**
@@ -13,19 +14,24 @@
  *
  * @var $block \Magento\Catalog\Block\Category\View
  */
+
+// phpcs:disable Magento2.Templates.ThisInTemplate.FoundThis
+// phpcs:disable Generic.WhiteSpace.ScopeIndent.IncorrectExact
+// phpcs:disable Magento2.Security.LanguageConstruct.DirectOutput
 ?>
 <?php
-    $_helper    = $this->helper('Magento\Catalog\Helper\Output');
-    $_category  = $block->getCurrentCategory();
-    $_imgHtml   = '';
-    if ($_imgUrl = $_category->getImageUrl()) {
-        if($_category->getMagetimCategoryImageAlt()) {
-            $img_alt = $_category->getMagetimCategoryImageAlt();
-        } else {
-            $img_alt = $_category->getName();
-        }
-        $_imgHtml = '<div class="category-image"><img src="' . $_imgUrl . '" alt="' . $block->escapeHtml($img_alt) . '" title="' . $block->escapeHtml($_category->getName()) . '" class="image" /></div>';
-        $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
-        /* @escapeNotVerified */ echo $_imgHtml;
-    }
+$_category  = $block->getCurrentCategory();
+$_imgHtml   = '';
+if ($_imgUrl = $block->getImage()->getUrl($_category)) {
+    $_imgHtml = '<div class="category-image"><img src="'
+        . $block->escapeUrl($_imgUrl)
+        . '" alt="'
+        . $block->escapeHtmlAttr($_category->getEeCategoryImageAlt() ?
+            $_category->getEeCategoryImageAlt() : $_category->getName())
+        . '" title="'
+        . $block->escapeHtmlAttr($_category->getName())
+        . '" class="image" /></div>';
+    $_imgHtml = $block->getOutput()->categoryAttribute($_category, $_imgHtml, 'image');
+    /* @noEscape */ echo $_imgHtml;
+}
 ?>

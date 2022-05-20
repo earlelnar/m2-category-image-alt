@@ -1,0 +1,16 @@
+{
+  "name": "ee/categoryimagealttags",
+  "description": "Magento Set Custom Category Image Alt Tag",
+  "type": "magento2-module",
+  "version": "2.0.1",
+  "require": {
+    "php": "~7.3.0||~7.4.0"
+  },
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "EE\\CategoryImageAltTags\\": ""
+    }
+  }
+}
+

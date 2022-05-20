@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="MageTim_CategoryImageAltTags" setup_version="2.0.0"/>
+<!--
+/**
+ * EE Bored in the house.
+ *
+ * @category    EE
+ * @package     CreateAccount
+ * @author      Earl Elnar
+ * @email       acenplify@gmail.com
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="EE_CategoryImageAltTags" setup_version="2.0.0">
+        <sequence>
+            <module name="Magento_Catalog"/>
+        </sequence>
+    </module>
 </config>
