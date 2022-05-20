@@ -5,9 +5,6 @@ By default Magento 2 has only these category attributes under Search Engine Opti
 
 ![search_engine_optimization](https://user-images.githubusercontent.com/14094984/66201033-ecb12b80-e6d4-11e9-9c22-2921a28a2643.png)
 
-
-</br>
-
 ## Installation
 1. Download the extension .zip file and extract the files.
 2. Copy the extension files folder to the {magento2-root-dir}/app/code
@@ -34,10 +31,14 @@ By default Magento 2 has only these category attributes under Search Engine Opti
 
 <br/>
 
-## Required Magento version
-Magento 2.3.x
+## Requirements
+Magento 2.4.x Community
 
 <br/>
 
 ## Changelog
-**Version 2.0.0 (2019-10-4)**
+### [Version 2.0.0] (2019-10-4)
+
+### [Version 2.0.1] - (2022-20-5)
+#### Improved
+- Refactored the custom module for Magento 2.4.x

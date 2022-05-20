@@ -1,10 +1,17 @@
 <?php
 /**
- * @author MazeStricks
- * Email: acenplify@gmail.com
+ * EE Bored in the house.
+ *
+ * @category    EE
+ * @package     CategoryImageAltTags
+ * @author      Earl Elnar
+ * @email       acenplify@gmail.com
  */
-\Magento\Framework\Component\ComponentRegistrar::register(
-    \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'MageTim_CategoryImageAltTags',
+
+use Magento\Framework\Component\ComponentRegistrar;
+
+ComponentRegistrar::register(
+    ComponentRegistrar::MODULE,
+    'EE_CategoryImageAltTags',
     __DIR__
 );

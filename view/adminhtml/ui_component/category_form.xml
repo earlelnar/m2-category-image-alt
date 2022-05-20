@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
+ * EE Bored in the house.
+ *
+ * @category    EE
+ * @package     CreateAccount
+ * @author      Earl Elnar
+ * @email       acenplify@gmail.com
  */
 -->
-<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <fieldset name="search_engine_optimization">
-        <field name="magetim_category_image_alt" sortOrder="160" formElement="input">
+        <field name="ee_category_image_alt" sortOrder="160" formElement="input">
             <settings>
                 <dataType>string</dataType>
                 <label translate="true">Category Image Alt</label>
